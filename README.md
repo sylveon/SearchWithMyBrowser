@@ -32,7 +32,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
 "SearchWithMyBrowser"="Software\\SearchWithMyBrowser\\Capabilities"
-```
+```  
+
+If you appear to not have used the provided `install.cmd` to install the program, you can run `rundll32.exe shell32.dll,OpenAs_RunDLL microsoft-edge:` to then set SearchWithMyBrowser as the protocol handler.
 
 ## Uninstalling the program
 
