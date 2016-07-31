@@ -1,9 +1,12 @@
 using Microsoft.Win32;
 using System.Diagnostics;
 
-public class SearchWithMyBrowser {
-    public static void Main(string[] CommandLine) {
-        if (CommandLine[0] == "/register") {
+public class SearchWithMyBrowser
+{
+    public static void Main(string[] CommandLine)
+    {
+        if (CommandLine[0] == "/register")
+        {
             RegistryKey Software = Registry.LocalMachine.OpenSubKey("Software", true);
             RegistryKey Class = Software.CreateSubKey(@"Classes\SearchWithMyBrowser", true);
             Class.SetValue("URL Protocol", string.Empty);
@@ -14,15 +17,27 @@ public class SearchWithMyBrowser {
             URLAssociations.SetValue("microsoft-edge", "SearchWithMyBrowser");
             RegistryKey RegisteredApplications = Software.OpenSubKey("RegisteredApplications", true);
             RegisteredApplications.SetValue("SearchWithMyBrowser", @"Software\SearchWithMyBrowser\Capabilities");
-        } else if (CommandLine[0] == "/unregister") {
+        }
+        else if (CommandLine[0] == "/unregister")
+        {
             RegistryKey Software = Registry.LocalMachine.OpenSubKey("Software", true);
             RegistryKey RegisteredApplications = Software.OpenSubKey("RegisteredApplications", true);
             RegisteredApplications.DeleteValue("SearchWithMyBrowser");
             Software.DeleteSubKeyTree("SearchWithMyBrowser");
             RegistryKey Classes = Software.OpenSubKey("Classes", true);
             Classes.DeleteSubKeyTree("SearchWithMyBrowser");
-        } else {
-            Process.Start(CommandLine[0].Substring(15));
+        }
+        else
+        {
+            var searchUrl = CommandLine[0].Substring(15);
+            var bing = @"https://www.bing.com";
+            var google = @"https://www.google.com";
+            if (searchUrl.StartsWith(bing))
+            {
+                searchUrl = searchUrl.Substring(bing.Length);
+                searchUrl = google + searchUrl;
+            }
+            Process.Start(searchUrl);
         }
     }
 }
