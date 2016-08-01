@@ -2,7 +2,7 @@
 
 Since April 28th, Cortana restrics Microsoft Edge as it's browser to force Bing upon users.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. It will then simply redirect the request to your default browser.  
-If you had anything that redirects Cortana searches to your favorite search engine, it will still work.  
+To use another search engine than Bing, please refer to [this documentation](https://github.com/charlesmilette/SearchWithMyBrowser/blob/master/CustomSearchEngine.md).  
 
 [This program is licensed under the WTFPL.](https://raw.githubusercontent.com/charlesmilette/SearchWithMyBrowser/master/LICENSE)
 
