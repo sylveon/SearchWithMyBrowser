@@ -26,11 +26,11 @@ echo     1. Right-click on it while pressing "Shift".
 echo     2. Click on "Copy as Path".
 echo     3. Right-click in this command prompt.
 echo     4. If the path has not pasted itself already, click on "Paste".
-echo     5. Remove the quotes at the beginning and the end.
-echo     6. Press "Enter" to validate.
+echo     5. Press "Enter" to validate.
 echo.
 echo.
-set /P Executable=Move the executable at any desired permanent location, and then type it's location here without quotes:
+set /P Executablewq=Move the executable at any desired permanent location, and then type its location here: 
+call:GetFilenameWithoutQuotes %Executablewq%
 IF NOT DEFINED Executable (
     cls
     echo You did not specify a file!
@@ -50,3 +50,8 @@ echo A dialog will show after you press any key. Select "SearchWithMyBrowser.exe
 pause
 rundll32.exe shell32.dll,OpenAs_RunDLL microsoft-edge:
 :End
+:GetFilenameWithoutQuotes
+if not [%2]==[] set noquotes=1
+if [%noquotes%]==[1] (set Executable=%* & exit /b)
+set Executable=%~f1
+exit /b
