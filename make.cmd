@@ -1,22 +1,41 @@
 @echo off
-rem If anyone has time to add fail checks, feel free to contribute.
-IF NOT EXIST ".\nuget.exe" (
-    echo Downloading NuGet...
-    powershell -command "& { iwr https://dist.nuget.org/win-x86-commandline/v3.3.0/nuget.exe -OutFile nuget.exe }
-    echo.
-    echo.
-    echo.
+
+
+
+rem Clean older builds
+del /F /Q "%~dp0SearchWithMyBrowser.exe"
+del /F /Q "%~dp0SearchWithMyBrowser.pdb"
+echo.
+
+FOR %%i IN ("%~dp0SearchWithMyBrowser.exe" "%~dp0SearchWithMyBrowser.pdb") DO (
+    IF EXIST %%i (
+        IF %0=="%~f0" (
+            cls
+            echo Could not clean!
+            echo.
+            echo Try deleting %%i by yourself.
+            echo.
+            pause
+        )
+        exit /B
+    )
 )
-IF NOT EXIST ".\Microsoft.Net.Compilers.1.2.1\tools\csc.exe" (
-    echo Installing compiler...
-    .\nuget.exe install Microsoft.Net.Compilers -Version 1.2.1
-    echo.
-    echo.
-    echo.
+
+
+
+rem Build the executable
+"%windir%\Microsoft.NET\Framework\v4.0.30319\csc.exe" /nologo /target:winexe /debug "%~dp0SearchWithMyBrowser.cs" > "%temp%\csc.log"
+
+IF NOT EXIST "%~dp0SearchWithMyBrowser.exe" (
+    IF %0=="%~f0" (
+        cls
+        echo Could not compile!
+        echo.
+        echo The error log might contain relevant information about what happened:
+    )
+    type "%temp%\csc.log"
+    IF %0=="%~f0" (
+        echo.
+        pause
+    )
 )
-echo Compiling...
-.\Microsoft.Net.Compilers.1.2.1\tools\csc.exe SearchWithMyBrowser.cs /target:winexe /debug
-echo.
-echo.
-echo.
-echo Done!
