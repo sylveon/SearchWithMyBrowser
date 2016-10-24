@@ -24,7 +24,7 @@ FOR %%i IN ("%~dp0SearchWithMyBrowser.exe" "%~dp0SearchWithMyBrowser.pdb") DO (
 
 
 rem Build the executable
-"%windir%\Microsoft.NET\Framework\v4.0.30319\csc.exe" /nologo /target:winexe /debug "%~dp0SearchWithMyBrowser.cs" > "%temp%\csc.log"
+"%windir%\Microsoft.NET\Framework\v4.0.30319\csc.exe" /nologo /target:winexe /debug /optimize /nowin32manifest /out:"%~dp0SearchWithMyBrowser.exe" "%~dp0SearchWithMyBrowser.cs" > "%temp%\csc.log"
 
 IF NOT EXIST "%~dp0SearchWithMyBrowser.exe" (
     IF %0=="%~f0" (
