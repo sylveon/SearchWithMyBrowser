@@ -17,7 +17,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Added by the author
+# Compilation results
 *.exe
 *.pdb
-Microsoft.Net.Compilers.1.2.1/
