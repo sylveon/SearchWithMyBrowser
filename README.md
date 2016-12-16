@@ -45,6 +45,8 @@ Windows Registry Editor Version 5.00
 
 If you appear to not have used the provided `install.cmd` to install the program, you can run `rundll32.exe shell32.dll,OpenAs_RunDLL microsoft-edge:` to then set SearchWithMyBrowser as the protocol handler.
 
+**Note: Some users have reported that SearchWithMyBrowser doesn't works until the system is restarted.**
+
 ## Uninstalling the program
 
 Simply call it as admin with the command line option `/unregister`, and delete the file.  
