@@ -10,10 +10,7 @@ To use another search engine than Bing, please refer to [this documentation](htt
 
 If you like this program or what I am doing, you are more than welcome to [donate to me via PayPal](https://paypal.me/CharlesMilette). I will add more features to the program once I reach different milestones:  
 
-- 10$: I will rebuild the install script from the ground up so it's easier to use and more reliable
-- 20$: I will make a real installer, that you will just have to download and run.
-- 30$: I will use Project Centennial to submit the program on the Windows Store. (Note: Microsoft may refuse it because it allows you to circumvent their limitations)
-- 40$: I'm out of ideas. Suggest me something!
+All funded for now! Working on the new features (new install script, installer and Windows Store release).
 
 ## Building the program
 
