@@ -47,7 +47,6 @@ cls
 "%Executable%" /register
 cls
 echo A dialog will show after you press any key. Select "SearchWithMyBrowser.exe" and press "OK".
-echo Note: A restart may be required for SearchWithMyBrowser to appear or work.
 pause
 rundll32.exe shell32.dll,OpenAs_RunDLL microsoft-edge:
 :End
