@@ -8,3 +8,4 @@ FOR /d %%i IN (*) DO (
         call %%i\Make.cmd
     )
 )
+pause
