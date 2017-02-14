@@ -14,14 +14,12 @@ If for any particular reason you need to test the executable you builded yoursel
 
 ## Building the program
 
-First, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default location.  
+First, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default locationif you want to build the installer.  
 To build the whole project, run the `Make.cmd` file at the root of the repository. You can also build subcomponents by running the `Make.cmd` file present in their subfolder.
 
 ## Boring legal stuff
 
 Copyright © 2017 Charles Milette <charles.milette@gmail.com>  
-This work is free. You can redistribute it and/or modify it under the  
-terms of the Do What The Fuck You Want To Public License, Version 2,  
-as published by Sam Hocevar. See the LICENSE file for more details.
+This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See the LICENSE file for more details.
 
 Some assets used where designed by my friend [dAKirby](http://dakirby309.deviantart.com/). See his other icons [here](http://dakirby309.deviantart.com/art/Simply-Styled-Icon-Set-664-Icons-FREE-469662576).
