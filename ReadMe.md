@@ -14,7 +14,7 @@ If for any particular reason you need to test the executable you builded yoursel
 
 ## Building the program
 
-First, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default locationif you want to build the installer.  
+First, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default location if you want to build the installer.  
 To build the whole project, run the `Make.cmd` file at the root of the repository. You can also build subcomponents by running the `Make.cmd` file present in their subfolder.
 
 ## Boring legal stuff
