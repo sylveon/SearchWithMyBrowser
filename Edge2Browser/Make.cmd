@@ -4,15 +4,15 @@
 
 rem Make output directory
 mkdir "%~dp0..\Output\"
+echo.
 
 
 
-rem Clean older builds
+rem Clean older build
 del /F /Q "%~dp0..\Output\SearchWithMyBrowser.exe"
-del /F /Q "%~dp0..\Output\SearchWithMyBrowser.pdb"
 echo.
 
 
 
 rem Build the executable
-"%windir%\Microsoft.NET\Framework\v4.0.30319\csc.exe" /nologo /target:winexe /debug /optimize /nowin32manifest /win32icon:"%~dp0..\Resources\Edge2Browser.ico" /out:"%~dp0..\Output\SearchWithMyBrowser.exe" "%~dp0Program.cs"
+"%windir%\Microsoft.NET\Framework\v4.0.30319\csc.exe" /nologo /target:winexe /optimize /nowin32manifest /win32icon:"%~dp0..\Resources\Edge2Browser.ico" /out:"%~dp0..\Output\SearchWithMyBrowser.exe" "%~dp0Program.cs"
