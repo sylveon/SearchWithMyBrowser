@@ -18,10 +18,6 @@ SourceDir=..
 VersionInfoDescription=Open Cortana searches with your default browser.
 WizardImageFile=Resources\SetupSidebar.bmp
 WizardSmallImageFile=Resources\SetupHeader.bmp
-;todos
-; create a makefile for install
-; make readmes for subfolders and main readme
-; credit dakirby in resources subfolder
 
 [Files]
 Source: "Output\SearchWithMyBrowser.exe"; DestDir: "{app}"
