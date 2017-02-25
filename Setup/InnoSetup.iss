@@ -1,6 +1,6 @@
-[Setup]
+﻿[Setup]
 AllowRootDirectory=yes
-AppCopyright=Copyright � 2017 Charles Milette <charles.milette@gmail.com>
+AppCopyright=Copyright © 2017 Charles Milette <charles.milette@gmail.com>
 AppendDefaultDirName=no
 AppName=SearchWithMyBrowser
 AppPublisher=Charles Milette

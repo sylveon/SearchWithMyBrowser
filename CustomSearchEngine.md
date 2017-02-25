@@ -1,4 +1,4 @@
-# How to use a custom search engine
+﻿# How to use a custom search engine
 
 ## Google Chrome, Vivaldi, Opera, etc...
 

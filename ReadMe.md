@@ -1,4 +1,4 @@
-# SearchWithMyBrowser
+﻿# SearchWithMyBrowser
 
 Since April 28th, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.
@@ -19,7 +19,7 @@ To build the whole project, run the `Make.cmd` file at the root of the repositor
 
 ## Boring legal stuff
 
-Copyright � 2017 Charles Milette <charles.milette@gmail.com>  
+Copyright © 2017 Charles Milette <charles.milette@gmail.com>  
 This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See the LICENSE file for more details.
 
 Some assets used where designed by my friend [dAKirby](http://dakirby309.deviantart.com/). See his other icons [here](http://dakirby309.deviantart.com/art/Simply-Styled-Icon-Set-664-Icons-FREE-469662576).
