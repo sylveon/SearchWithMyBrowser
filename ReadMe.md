@@ -1,6 +1,6 @@
 ﻿# SearchWithMyBrowser
 
-Since April 28th, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
+Since April 28ᵗʰ, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.
 
 ## Donating
@@ -9,13 +9,13 @@ If you like my work, you are more than welcome to [donate](https://PayPal.me/Cha
 
 ## Installing the program
 
-Go to the [releases section](https://github.com/charlesmilette/SearchWithMyBrowser/releases) to download the latest version. Once downloaded, run the installer and follow the instructions.  
-If for any particular reason you need to test the executable you builded yourself, you can either make the same registry entries than the installer or just overwrite the file created by the installer.
+Head over to the [releases section](https://github.com/charlesmilette/SearchWithMyBrowser/releases) to download the latest version. Once downloaded, run the installer and follow the instructions.  
+If for any particular reason you need to test an executable you builded yourself, you can either make the same registry entries than the installer or just overwrite the file created by the installer.
 
 ## Building the program
 
-First, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default location if you want to build the installer.  
-To build the whole project, run the `Make.cmd` file at the root of the repository. You can also build subcomponents by running the `Make.cmd` file present in their subfolder.
+If you want to build the installer, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default location.  
+To build the whole project (including the installer), run the `Make.cmd` file at the root of the repository. You can also build subcomponents individually by running the `Make.cmd` file present in their subfolder.
 
 ## Boring legal stuff
 
