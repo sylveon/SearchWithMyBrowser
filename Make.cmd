@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 rem Call all the make files from subdirectories
 FOR /d %%i IN (*) DO (

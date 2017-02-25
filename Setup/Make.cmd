@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 rem Make output directory
 mkdir "%~dp0..\Output\"
