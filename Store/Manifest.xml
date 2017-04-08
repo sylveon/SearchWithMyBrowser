@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="SearchWithMyBrowser" ProcessorArchitecture="x86" Publisher="CN=charles_milette" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>SearchWithMyBrowser</DisplayName>
+    <PublisherDisplayName>Charles Milette</PublisherDisplayName>
+    <Logo>Assets\AppStoreLogo.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+  <Applications>
+    <Application Id="SearchWithMyBrowser" Executable="SearchWithMyBrowser.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="SearchWithMyBrowser" Description="Open Cortana searches with your default browser." BackgroundColor="transparent" Square150x150Logo="Assets\AppMedTile.png" Square44x44Logo="Assets\AppList.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\AppWideTile.png" Square310x310Logo="Assets\AppLargeTile.png" Square71x71Logo="Assets\AppSmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.protocol">
+          <uap3:Protocol Name="microsoft-edge" Parameters="&quot;%1&quot;">
+            <uap:DisplayName>SearchWithMyBrowser Protocol Redirection</uap:DisplayName>
+          </uap3:Protocol>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
