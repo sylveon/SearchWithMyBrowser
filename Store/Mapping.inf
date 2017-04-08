@@ -1,0 +1,9 @@
+﻿[Files]
+"..\Output\SearchWithMyBrowser.exe"          "SearchWithMyBrowser.exe"
+"..\Resources\Store.png"                     "Assets\AppStoreLogo.png"
+"..\Resources\Start.png"                     "Assets\AppList.png"
+"..\Resources\Small.png"                     "Assets\AppSmallTile.png"
+"..\Resources\Medium.png"                    "Assets\AppMedTile.png"
+"..\Resources\Wide.png"                      "Assets\AppWideTile.png"
+"..\Resources\Large.png"                     "Assets\AppLargeTile.png"
+"Manifest.xml"                          "AppxManifest.xml"
