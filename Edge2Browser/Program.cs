@@ -13,7 +13,7 @@ namespace SearchWithMyBrowser
 			{
 				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!\n\nOr maybe come back later, there might be something new here ;)", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 			}
-			else if (CommandLine.Length > 0 && CommandLine[0].StartsWith("microsoft-edge:", StringComparison.OrdinalIgnoreCase))
+			else if (CommandLine[0].StartsWith("microsoft-edge:", StringComparison.OrdinalIgnoreCase))
 			{
 				string LaunchURL = CommandLine[0].Substring(15);
 
