@@ -11,7 +11,7 @@ namespace SearchWithMyBrowser
 		{
 			if (CommandLine.Length == 0)
 			{
-				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!\n\nOr maybe come back later, there might be something new here ;)", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 			}
 			else if (CommandLine.Length > 0 && CommandLine[0].StartsWith("microsoft-edge:", StringComparison.OrdinalIgnoreCase))
 			{
