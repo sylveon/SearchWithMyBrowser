@@ -1,6 +1,6 @@
 ﻿# SearchWithMyBrowser
 
-Since April 28ᵗʰ, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
+Since April 28ᵗʰ 2016, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.
 
 ## Donating
@@ -14,8 +14,14 @@ If for any particular reason you need to test an executable you builded yourself
 
 ## Building the program
 
-If you want to build the installer, make sure you have the latest release of [Inno Setup](http://www.jrsoftware.org/isinfo.php) installed in the default location.  
-To build the whole project (including the installer), run the `Make.cmd` file at the root of the repository. You can also build subcomponents individually by running the `Make.cmd` file present in their subfolder.
+Note to users: It is not required to build the program anymore. See precedent section for installation instructions.  
+
+Optional dependencies:
+- [Inno Setup](http://www.jrsoftware.org/isinfo.php) - To build the installer.
+- [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), version 10.0.14393 or higher - To build the store package.
+
+If you decided to build the installer, make sure that `ISCC.exe` is in your path. If you decided to build the store package, make sure that `makeappx.exe` is in your path.  
+To build the whole project (including the installer and the store package), run the `Make.cmd` file at the root of the repository. You can also build subcomponents individually by running the `Make.cmd` file present in their subfolder.
 
 ## Boring legal stuff
 
