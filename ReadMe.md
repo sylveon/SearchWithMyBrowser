@@ -19,9 +19,12 @@ To build the whole project (including the installer), run the `Make.cmd` file at
 
 ## Boring legal stuff
 
-Copyright © 2017 Charles Milette <charles.milette@gmail.com>  
-This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See the LICENSE file for more details.
+Copyright (C) 2017  Charles Milette
 
-This software comes without any warranty, see the DISCLAIMER file for more details.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see [here](http://www.gnu.org/licenses/).
 
 Some assets used where designed by my friend [dAKirby](http://dakirby309.deviantart.com/). See his other icons [here](http://dakirby309.deviantart.com/art/Simply-Styled-Icon-Set-664-Icons-FREE-469662576).
