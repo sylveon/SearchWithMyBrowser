@@ -18,7 +18,7 @@ You can also get a copy in the [releases section](https://github.com/charlesmile
 Note to users: It is not required to build the program anymore. See precedent section for installation instructions.  
 
 Optional dependencies:
-- [Inno Setup](http://www.jrsoftware.org/isinfo.php) - To build the installer.
+- [Inno Setup](http://www.jrsoftware.org/isinfo.php) **Unicode** - To build the installer.
 - [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), version 10.0.14393 or higher - To build the store package.
 
 If you decided to build the installer, make sure that `ISCC.exe` is in your path. If you decided to build the store package, make sure that `makeappx.exe` is in your path. See [this article](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/) for instructions.  
