@@ -5,12 +5,13 @@ SearchWithMyBrowser is a little utility that associates itself with the `microso
 
 ## Donating
 
-If you like my work, you are more than welcome to [donate](https://PayPal.me/CharlesMilette).
+If you like my work, you are more than welcome to [donate](https://PayPal.me/CharlesMilette) (or use the Store version).
 
 ## Installing the program
 
-Head over to the [releases section](https://github.com/charlesmilette/SearchWithMyBrowser/releases) to download the latest version. Once downloaded, run the installer and follow the instructions.  
-If for any particular reason you need to test an executable you builded yourself, you can either make the same registry entries than the installer or just overwrite the file created by the installer.
+Head over to the [Windows Store](https://www.microsoft.com/store/apps/9PPKNR9RK26R) to grab it.
+
+You can also get a copy in the [releases section](https://github.com/charlesmilette/SearchWithMyBrowser/releases).
 
 ## Building the program
 
