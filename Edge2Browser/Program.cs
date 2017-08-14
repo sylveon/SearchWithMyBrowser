@@ -16,7 +16,7 @@ namespace SearchWithMyBrowser
 			{
 				string LaunchURL = CommandLine[0].Substring(15);
 
-				if (LaunchURL.StartsWith("?launchContext1=Microsoft.Windows.Cortana", StringComparison.OrdinalIgnoreCase)) // Handle FCU
+				if (LaunchURL.StartsWith("?launchContext1=", StringComparison.OrdinalIgnoreCase)) // Handle FCU
 				{
 					var ProtocolParameters = HttpUtility.ParseQueryString(LaunchURL);
 					string DecodedLaunchURL = HttpUtility.UrlDecode(ProtocolParameters["url"]);
