@@ -19,7 +19,19 @@ namespace SearchWithMyBrowser
 				if (LaunchURL.StartsWith("?launchContext1=Microsoft.Windows.Cortana", StringComparison.OrdinalIgnoreCase)) // Handle FCU
 				{
 					var ProtocolParameters = HttpUtility.ParseQueryString(LaunchURL);
-					LaunchURL = HttpUtility.UrlDecode(ProtocolParameters["url"]);
+					string DecodedLaunchURL = HttpUtility.UrlDecode(ProtocolParameters["url"]);
+					Uri LaunchUri;
+
+					try
+					{
+						LaunchUri = new Uri(DecodedLaunchURL);
+					}
+					catch (System.UriFormatException)
+					{
+						return;
+					}
+
+					LaunchURL = LaunchUri.AbsoluteUri + "?" + HttpUtility.UrlEncode(LaunchUri.Query);
 				}
 
 				if (LaunchURL.StartsWith("//"))
@@ -28,11 +40,13 @@ namespace SearchWithMyBrowser
 				if (!new string[] {"http://", "https://"}.Any(ValidProtocol => LaunchURL.StartsWith(ValidProtocol, StringComparison.OrdinalIgnoreCase)))
 					LaunchURL = "http://" + LaunchURL;
 
-				if (new Uri(LaunchURL).IsWellFormedOriginalString())
+				if (Uri.IsWellFormedUriString(LaunchURL, UriKind.Absolute))
+				{
 					Process.Start(new ProcessStartInfo(){
 						FileName = LaunchURL,
 						UseShellExecute = true
 					});
+				}
 			}
 		}
 	}
