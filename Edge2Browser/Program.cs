@@ -28,7 +28,10 @@ namespace SearchWithMyBrowser
 					LaunchURL = "http://" + LaunchURL;
 
 				if (new Uri(LaunchURL).IsWellFormedOriginalString())
-					Process.Start(new ProcessStartInfo(){FileName = LaunchURL});
+					Process.Start(new ProcessStartInfo(){
+						FileName = LaunchURL,
+						UseShellExecute = true
+					});
 			}
 		}
 	}
