@@ -2,6 +2,7 @@
 "..\Output\SearchWithMyBrowser.exe"          "SearchWithMyBrowser.exe"
 "..\Resources\StoreIcon.png"                 "Assets\AppStoreLogo.png"
 "..\Resources\StartIcon.png"                 "Assets\AppList.png"
+"..\Resources\TaskbarIcon.png"               "Assets\AppList.targetsize-44_altform-unplated.png"
 "..\Resources\TileSmall.png"                 "Assets\AppSmallTile.png"
 "..\Resources\TileMedium.png"                "Assets\AppMedTile.png"
 "..\Resources\TileWide.png"                  "Assets\AppWideTile.png"
