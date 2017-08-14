@@ -13,5 +13,5 @@ IF EXIST "%~dp0..\Output\SWMB-setup.exe" (
 )
 
 rem Build the installer
-ISCC.exe /Q "%~dp0InnoSetup.iss"
+ISCC /Q "%~dp0InnoSetup.iss"
 echo.
