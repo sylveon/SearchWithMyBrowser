@@ -14,5 +14,5 @@ IF EXIST "%~dp0..\Output\StorePackage.appx" (
 
 rem Build the package
 cd "%~dp0"
-"C:\Program Files (x86)\Windows Kits\10\bin\x64\makeappx.exe" pack /f "%~dp0Mapping.inf" /p "%~dp0..\Output\StorePackage.appx" > nul
+makeappx pack /f "%~dp0Mapping.inf" /p "%~dp0..\Output\StorePackage.appx" /o > nul
 echo.
