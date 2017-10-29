@@ -1,5 +1,6 @@
 ﻿[Files]
 "..\Output\SearchWithMyBrowser.exe"          "SearchWithMyBrowser.exe"
+"..\Output\SearchWithMyBrowserFCUHack.exe"   "SearchWithMyBrowserFCUHack.exe"
 "..\Resources\StoreIcon.png"                 "Assets\AppStoreLogo.png"
 "..\Resources\StartIcon.png"                 "Assets\AppList.png"
 "..\Resources\TaskbarIcon.png"               "Assets\AppList.targetsize-44_altform-unplated.png"
