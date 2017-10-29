@@ -35,7 +35,7 @@
           Executable="SearchWithMyBrowserFCUHack.exe"
           EntryPoint="Windows.FullTrustApplication">
           <desktop:StartupTask
-            TaskId="SWMBFCUHACK"
+            TaskId="SWMBFCUHack"
             Enabled="true"
             DisplayName="SearchWithMyBrowser workaround for Fall Creator Update" />
         </desktop:Extension>
