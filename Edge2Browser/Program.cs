@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -42,10 +43,49 @@ namespace SearchWithMyBrowser
 
 				if (Uri.IsWellFormedUriString(LaunchURL, UriKind.Absolute))
 				{
-					Process.Start(new ProcessStartInfo(){
-						FileName = LaunchURL,
-						UseShellExecute = true
-					});
+					try
+					{
+						Process.Start(new ProcessStartInfo(){
+							FileName = LaunchURL,
+							UseShellExecute = true
+						});
+					}
+					catch (Win32Exception exc)
+					{
+						if (exc.ErrorCode == -2147467259) // https://support.microsoft.com/en-us/help/305703/how-to-start-the-default-internet-browser-programmatically-by-using-vi
+						{
+							var fallbackResult = MessageBox.Show(
+								"It seems like your default browser is misconfigured.\n\nDo you want to fallback to using Internet Explorer?",
+								"SearchWithMyBrowser",
+								MessageBoxButtons.YesNo,
+								MessageBoxIcon.Exclamation
+							);
+
+							if (fallbackResult == DialogResult.Yes)
+							{
+								Process.Start("iexplore.exe", LaunchURL);
+							}
+							else
+							{
+								var repairResult = MessageBox.Show(
+									"Do you want to open the Settings app to repair your default browser?",
+									"SearchWithMyBrowser",
+									MessageBoxButtons.YesNo,
+									MessageBoxIcon.Question
+								);
+
+								if (repairResult == DialogResult.Yes)
+								{
+									Process.Start(new ProcessStartInfo(){
+										FileName = "ms-settings:defaultapps",
+										UseShellExecute = true
+									});
+								}
+							}
+							return;
+						}
+						throw;
+					}
 				}
 			}
 		}
