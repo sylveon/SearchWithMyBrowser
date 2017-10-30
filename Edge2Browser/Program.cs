@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Windows.Forms;
 
@@ -11,6 +13,12 @@ namespace SearchWithMyBrowser
 	{
 		static void Main(string[] CommandLine)
 		{
+			string installLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+			string hackPath = Path.Combine(installLocation, "SearchWithMyBrowserFCUHack.exe");
+
+			if (File.Exists(hackPath) && Process.GetProcessesByName(hackPath).Length == 0)
+				Process.Start(hackPath);
+
 			if (CommandLine.Length == 0)
 				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!\n\nOr maybe come back later, there might be something new here ;)", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 			else if (CommandLine[0].StartsWith("microsoft-edge:", StringComparison.OrdinalIgnoreCase))
