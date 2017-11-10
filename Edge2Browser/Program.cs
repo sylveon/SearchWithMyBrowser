@@ -11,6 +11,50 @@ namespace SearchWithMyBrowser
 {
 	class Edge2Browser
 	{
+		static void LaunchInternetURL(string URL, bool BypassCatch = false)
+		{
+			try
+			{
+				Process.Start(new ProcessStartInfo(){
+					FileName = URL,
+					UseShellExecute = true
+				});
+			}
+			catch (Win32Exception exc)
+			{
+				if (exc.ErrorCode == -2147467259 && !BypassCatch) // https://support.microsoft.com/en-us/help/305703/how-to-start-the-default-internet-browser-programmatically-by-using-vi
+				{
+					var repairResult = MessageBox.Show(
+						"It seems like your default browser is misconfigured.\n\nDo you want to open the Settings app to repair your default browser?",
+						"SearchWithMyBrowser",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Question
+					);
+
+					if (repairResult == DialogResult.Yes)
+					{
+						LaunchInternetURL("ms-settings:defaultapps", true); // Recursion!
+					}
+					else
+					{
+						var fallbackResult = MessageBox.Show(
+							"Do you want to fallback to using Internet Explorer?",
+							"SearchWithMyBrowser",
+							MessageBoxButtons.YesNo,
+							MessageBoxIcon.Exclamation
+						);
+
+						if (fallbackResult == DialogResult.Yes)
+						{
+							Process.Start("iexplore.exe", URL);
+						}
+					}
+					return;
+				}
+				throw;
+			}
+		}
+
 		static void Main(string[] CommandLine)
 		{
 			string installLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -23,78 +67,21 @@ namespace SearchWithMyBrowser
 				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!\n\nOr maybe come back later, there might be something new here ;)", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 			else if (CommandLine[0].StartsWith("microsoft-edge:", StringComparison.OrdinalIgnoreCase))
 			{
-				string LaunchURL = CommandLine[0].Substring(15);
+				string LaunchURL = CommandLine[0].Substring(15); // Remove "microsoft-edge:"
 
 				if (LaunchURL.StartsWith("?launchContext1=", StringComparison.OrdinalIgnoreCase)) // Handle FCU
 				{
 					var ProtocolParameters = HttpUtility.ParseQueryString(LaunchURL);
-					string DecodedLaunchURL = HttpUtility.UrlDecode(ProtocolParameters["url"]);
-					Uri LaunchUri;
-
-					try
-					{
-						LaunchUri = new Uri(DecodedLaunchURL);
-					}
-					catch (System.UriFormatException)
-					{
-						return;
-					}
-
-					LaunchURL = LaunchUri.AbsoluteUri + "?" + HttpUtility.UrlEncode(LaunchUri.Query);
+					LaunchURL = ProtocolParameters["url"];
 				}
-
-				if (LaunchURL.StartsWith("//"))
-					LaunchURL = LaunchURL.Substring(2);
 
 				if (!new string[] {"http://", "https://"}.Any(ValidProtocol => LaunchURL.StartsWith(ValidProtocol, StringComparison.OrdinalIgnoreCase)))
-					LaunchURL = "http://" + LaunchURL;
+					LaunchURL = "http://" + LaunchURL; // If there isn't a valid URL prefix, add one to prevent launching an arbitrary exe. (Or someone calling the protocol like this: "microsoft-edge:google.com")
 
 				if (Uri.IsWellFormedUriString(LaunchURL, UriKind.Absolute))
-				{
-					try
-					{
-						Process.Start(new ProcessStartInfo(){
-							FileName = LaunchURL,
-							UseShellExecute = true
-						});
-					}
-					catch (Win32Exception exc)
-					{
-						if (exc.ErrorCode == -2147467259) // https://support.microsoft.com/en-us/help/305703/how-to-start-the-default-internet-browser-programmatically-by-using-vi
-						{
-							var fallbackResult = MessageBox.Show(
-								"It seems like your default browser is misconfigured.\n\nDo you want to fallback to using Internet Explorer?",
-								"SearchWithMyBrowser",
-								MessageBoxButtons.YesNo,
-								MessageBoxIcon.Exclamation
-							);
-
-							if (fallbackResult == DialogResult.Yes)
-							{
-								Process.Start("iexplore.exe", LaunchURL);
-							}
-							else
-							{
-								var repairResult = MessageBox.Show(
-									"Do you want to open the Settings app to repair your default browser?",
-									"SearchWithMyBrowser",
-									MessageBoxButtons.YesNo,
-									MessageBoxIcon.Question
-								);
-
-								if (repairResult == DialogResult.Yes)
-								{
-									Process.Start(new ProcessStartInfo(){
-										FileName = "ms-settings:defaultapps",
-										UseShellExecute = true
-									});
-								}
-							}
-							return;
-						}
-						throw;
-					}
-				}
+					LaunchInternetURL(LaunchURL);
+				else
+					throw new UriFormatException(); // When this happens, we can get a memory dump by WER containing the CommandLine array for further analysis and bugfixing.
 			}
 		}
 	}
