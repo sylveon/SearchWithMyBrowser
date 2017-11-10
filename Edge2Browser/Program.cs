@@ -55,13 +55,18 @@ namespace SearchWithMyBrowser
 			}
 		}
 
-		static void Main(string[] CommandLine)
+		static void AutostartFCUHack()
 		{
 			string installLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 			string hackPath = Path.Combine(installLocation, "SearchWithMyBrowserFCUHack.exe");
 
 			if (File.Exists(hackPath) && Process.GetProcessesByName(hackPath).Length == 0)
 				Process.Start(hackPath);
+		}
+
+		static void Main(string[] CommandLine)
+		{
+			AutostartFCUHack();
 
 			if (CommandLine.Length == 0)
 				MessageBox.Show("Do a web search with Cortana to benefit of SearchWithMyBrowser!\n\nOr maybe come back later, there might be something new here ;)", "SearchWithMyBrowser", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
