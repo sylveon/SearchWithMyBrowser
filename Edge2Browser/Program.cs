@@ -75,6 +75,9 @@ namespace SearchWithMyBrowser
 					LaunchURL = ProtocolParameters["url"];
 				}
 
+				if (LaunchURL.StartsWith("//"))
+					LaunchURL = LaunchURL.Substring(2);
+
 				if (!new string[] {"http://", "https://"}.Any(ValidProtocol => LaunchURL.StartsWith(ValidProtocol, StringComparison.OrdinalIgnoreCase)))
 					LaunchURL = "http://" + LaunchURL; // If there isn't a valid URL prefix, add one to prevent launching an arbitrary exe. (Or someone calling the protocol like this: "microsoft-edge:google.com")
 
