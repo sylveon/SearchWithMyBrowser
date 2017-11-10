@@ -28,7 +28,7 @@ namespace SearchWithMyBrowser
 						"It seems like your default browser is misconfigured.\n\nDo you want to open the Settings app to repair your default browser?",
 						"SearchWithMyBrowser",
 						MessageBoxButtons.YesNo,
-						MessageBoxIcon.Question
+						MessageBoxIcon.Exclamation
 					);
 
 					if (repairResult == DialogResult.Yes)
@@ -41,7 +41,7 @@ namespace SearchWithMyBrowser
 							"Do you want to fallback to using Internet Explorer?",
 							"SearchWithMyBrowser",
 							MessageBoxButtons.YesNo,
-							MessageBoxIcon.Exclamation
+							MessageBoxIcon.Question
 						);
 
 						if (fallbackResult == DialogResult.Yes)
