@@ -38,4 +38,4 @@ You should have received a copy of the GNU General Public License along with thi
 ----------------------------
 
 All assets used where designed by [@dAKirby309](https://github.com/dAKirby309).  
-For the latest version Windows Store version's privacy policy, you can find it on my website: https://charlesmilette.net/swmb/privacy-policy
+For the latest version of the Windows Store edition's privacy policy, you can find it on my website: https://charlesmilette.net/swmb/privacy-policy
