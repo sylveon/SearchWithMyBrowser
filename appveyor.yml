@@ -1,0 +1,8 @@
+version: 'Build #{build}'
+build_script:
+- cmd: make.cmd
+test: off
+deploy: off
+artifacts:
+- path: Output
+  name: Build artifacts
