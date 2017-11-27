@@ -1,6 +1,6 @@
 ﻿# SearchWithMyBrowser
 
-[![Windows Store shield](https://img.shields.io/github/release/sylveon/SearchWithMyBrowser.svg?label=windows%20store&colorB=ff69b4)](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge) [![PayPal Donations shield](https://img.shields.io/badge/donations-paypal-blue.svg)](https://PayPal.me/CharlesMilette) [![Build status](https://ci.appveyor.com/api/projects/status/esx5x40oy3ff8wog/branch/master?svg=true)](https://ci.appveyor.com/project/sylveon/searchwithmybrowser/branch/master)
+[![Windows Store shield](https://img.shields.io/github/release/sylveon/SearchWithMyBrowser.svg?label=windows%20store&colorB=ff69b4)](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge) [![PayPal Donations shield](https://img.shields.io/badge/donations-paypal-blue.svg)](https://PayPal.me/CharlesMilette) [![Build status](https://img.shields.io/appveyor/ci/sylveon/SearchWithMyBrowser/master.svg)](https://ci.appveyor.com/project/sylveon/searchwithmybrowser)
 
 Since April 28ᵗʰ 2016, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.
