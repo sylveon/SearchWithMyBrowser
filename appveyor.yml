@@ -1,6 +1,7 @@
 version: 'Build #{build}'
 build_script:
-- cmd: make.cmd
+- cmd: call Make.cmd
+       exit /B %ERRORLEVEL%
 test: off
 deploy: off
 artifacts:
