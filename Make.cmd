@@ -1,6 +1,8 @@
 @echo off
 
-if [%APPVEYOR%] NEQ [] path C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.14393.0\x64;C:\Program Files (x86)\Inno Setup 5;%PATH%
+if [%APPVEYOR%] NEQ [] path C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Inno Setup 5;%PATH%
+
+where makepri.exe
 
 cd "%~dp0"
 
