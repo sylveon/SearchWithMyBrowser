@@ -18,6 +18,7 @@ IF EXIST "%~dp0..\Output\StorePackage.appx" (
 
 rem Build the package
 cd "%~dp0"
-makeappx pack /f "%~dp0Mapping.inf" /p "%~dp0..\Output\StorePackage.appx" /o > nul
+makeappx pack /f "%~dp0Mapping.inf" /p "%~dp0..\Output\StorePackage.appx" /o /l
+pause
 %errorcheck%
 echo.

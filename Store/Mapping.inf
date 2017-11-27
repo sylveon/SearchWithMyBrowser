@@ -1,7 +1,7 @@
 ﻿[Files]
 "..\Output\SearchWithMyBrowser.exe"          "SearchWithMyBrowser.exe"
 "..\Output\SearchWithMyBrowserFCUHack.exe"   "SearchWithMyBrowserFCUHack.exe"
-"..\Resources\StoreIcon.png"                 "Assets\StoreLogo.scale-400.png"
+"..\Resources\StoreIcon.png"                 "Assets\StoreLogo.png"
 "..\Resources\StartIcon.png"                 "Assets\Square44x44Logo.scale-400.png"
 "..\Resources\TaskbarIcon\16.png"            "Assets\Square44x44Logo.targetsize-16_altform-unplated.png"
 "..\Resources\TaskbarIcon\24.png"            "Assets\Square44x44Logo.targetsize-24_altform-unplated.png"
