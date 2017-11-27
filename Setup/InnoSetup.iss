@@ -14,12 +14,12 @@ DisableWelcomePage=no
 LicenseFile=LICENSE.md
 MinVersion=10
 OutputBaseFilename=SWMB-setup
-SetupIconFile=Resources\Setup.ico
+SetupIconFile=Setup\Setup.ico
 ShowLanguageDialog=auto
 SourceDir=..
 VersionInfoDescription=Open Cortana searches with your default browser.
-WizardImageFile=Resources\SetupSidebar.bmp
-WizardSmallImageFile=Resources\SetupHeader.bmp
+WizardImageFile=Setup\SetupSidebar.bmp
+WizardSmallImageFile=Setup\SetupHeader.bmp
 
 [Files]
 Source: "Output\SearchWithMyBrowser.exe"; DestDir: "{app}"
