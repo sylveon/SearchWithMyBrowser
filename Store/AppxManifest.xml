@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10">
-  <Identity Name="28017CharlesMilette.SearchWithMyBrowser" ProcessorArchitecture="x86" Publisher="CN=04797BBC-C7BB-462F-9B66-331C81E27C0E" Version="1.1.0.0" />
+  <Identity Name="28017CharlesMilette.SearchWithMyBrowser" ProcessorArchitecture="x86" Publisher="CN=dfsadf" Version="1.1.0.0" />
   <Properties>
     <DisplayName>SearchWithMyBrowser</DisplayName>
     <PublisherDisplayName>Charles Milette</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\StoreIcon.png</Logo>
   </Properties>
   <Resources>
-    <Resource Language="en" />
+    <Resource Language="en-US" />
+    <Resource uap:Scale="400" />
   </Resources>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.16299.0" />
@@ -17,9 +18,11 @@
   </Capabilities>
   <Applications>
     <Application Id="SearchWithMyBrowser" Executable="SearchWithMyBrowser.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="SearchWithMyBrowser" Description="Open Cortana searches with your default browser." BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+      <uap:VisualElements DisplayName="SearchWithMyBrowser" Description="Open Cortana searches with your default browser." BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71\Square71x71Logo.png">
           <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
             <uap:ShowOn Tile="square310x310Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
