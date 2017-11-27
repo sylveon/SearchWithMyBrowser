@@ -18,6 +18,10 @@ IF EXIST "%~dp0..\Output\StorePackage.appx" (
 
 rem Build the package
 cd "%~dp0"
-makeappx pack /f "%~dp0Mapping.inf" /p "%~dp0..\Output\StorePackage.appx" /o /l > nul
+makepri createconfig /cf "%~dp0priconfig.xml" /dq en-US
+%errorcheck%
+makepri new /pr "%~dp0" /cf "%~dp0priconfig.xml"
+%errorcheck%
+makeappx pack /d "%~dp0" /p "%~dp0..\Output\StorePackage.appx" /o > nul
 %errorcheck%
 echo.
