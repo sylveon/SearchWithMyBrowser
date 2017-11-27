@@ -4,12 +4,14 @@ if [%APPVEYOR%] NEQ [] path C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Pr
 
 cd "%~dp0"
 
-mkdir Output
+IF NOT EXIST Output mkdir Output ELSE rd /s /q Output
 
 rem Call all the make files from subdirectories
 FOR /d %%i IN (*) DO (
-    IF EXIST %%i\Make.cmd (
-        call %%i\Make.cmd
+    cd "%~dp0%%i"
+    IF EXIST Make.cmd (
+        call Make.cmd
     )
 )
+
 if [%APPVEYOR%] EQU [] pause
