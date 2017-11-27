@@ -4,21 +4,21 @@
   <Properties>
     <DisplayName>SearchWithMyBrowser</DisplayName>
     <PublisherDisplayName>Charles Milette</PublisherDisplayName>
-    <Logo>Assets\AppStoreLogo.png</Logo>
+    <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Resources>
     <Resource Language="en" />
   </Resources>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.15063.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.16299.0" />
   </Dependencies>
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
   <Applications>
     <Application Id="SearchWithMyBrowser" Executable="SearchWithMyBrowser.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="SearchWithMyBrowser" Description="Open Cortana searches with your default browser." BackgroundColor="transparent" Square150x150Logo="Assets\AppMedTile.png" Square44x44Logo="Assets\AppList.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\AppWideTile.png" Square310x310Logo="Assets\AppLargeTile.png" Square71x71Logo="Assets\AppSmallTile.png">
+      <uap:VisualElements DisplayName="SearchWithMyBrowser" Description="Open Cortana searches with your default browser." BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square310x310Logo" />
           </uap:ShowNameOnTiles>
