@@ -4,10 +4,14 @@
   <Properties>
     <DisplayName>SearchWithMyBrowser</DisplayName>
     <PublisherDisplayName>Charles Milette</PublisherDisplayName>
-    <Logo>Assets\StoreIcon.png</Logo>
+    <Logo>Assets\StoreLogo\StoreLogo.png</Logo>
   </Properties>
   <Resources>
-    <Resource Language="en-US" />
+    <Resource Language="en-us" />
+    <Resource uap:Scale="100" />
+    <Resource uap:Scale="125" />
+    <Resource uap:Scale="150" />
+    <Resource uap:Scale="200" />
     <Resource uap:Scale="400" />
   </Resources>
   <Dependencies>
