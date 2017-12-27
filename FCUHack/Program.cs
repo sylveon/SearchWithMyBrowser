@@ -6,7 +6,11 @@ namespace SearchWithMyBrowser
 	{
 		static void Main()
 		{
-			Task.Delay(-1).Wait();
+			while (true)
+			{
+				int two = 1 + 1; // Do work
+				Task.Delay(5000).GetAwaiter().GetResult();
+			}
 		}
 	}
 }
