@@ -86,8 +86,9 @@ namespace SearchWithMyBrowser
 				if (!new string[] {"http://", "https://"}.Any(ValidProtocol => LaunchURL.StartsWith(ValidProtocol, StringComparison.OrdinalIgnoreCase)))
 					LaunchURL = "http://" + LaunchURL; // If there isn't a valid URL prefix, add one to prevent launching an arbitrary exe. (Or someone calling the protocol like this: "microsoft-edge:google.com")
 
-				if (Uri.IsWellFormedUriString(LaunchURL, UriKind.Absolute))
-					LaunchInternetURL(LaunchURL);
+				Uri url;
+				if (Uri.TryCreate(LaunchURL, UriKind.Absolute, out url))
+					LaunchInternetURL(url.AbsoluteUri);
 				else
 					throw new UriFormatException(); // When this happens, we can get a memory dump by WER containing the CommandLine array for further analysis and bugfixing.
 			}
