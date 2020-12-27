@@ -1,6 +1,6 @@
 ﻿# SearchWithMyBrowser
 
-[![Windows Store shield](https://img.shields.io/github/release/sylveon/SearchWithMyBrowser.svg?label=windows%20store&colorB=ff69b4)](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge) [![PayPal Donations shield](https://img.shields.io/badge/donations-paypal-blue.svg)](https://PayPal.me/CharlesMilette) [![Build status](https://img.shields.io/appveyor/ci/sylveon/SearchWithMyBrowser/master.svg)](https://ci.appveyor.com/project/sylveon/searchwithmybrowser)
+[![Windows Store shield](https://img.shields.io/github/release/sylveon/SearchWithMyBrowser.svg?label=windows%20store&colorB=ff69b4)](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge) [![PayPal Donations shield](https://img.shields.io/badge/donations-paypal-blue.svg)](https://paypal.me/syIveon) [![Build status](https://img.shields.io/appveyor/ci/sylveon/SearchWithMyBrowser/master.svg)](https://ci.appveyor.com/project/sylveon/searchwithmybrowser)
 
 Since April 28ᵗʰ 2016, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.  
 SearchWithMyBrowser is a little utility that associates itself with the `microsoft-edge:` protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.
@@ -9,7 +9,7 @@ SearchWithMyBrowser is a little utility that associates itself with the `microso
 
 Click on this image to get it on the Microsoft Store:
 
-[<img src="https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png" alt="Get it from Microsoft" width="200"/>](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge)
+[<img src="https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png" alt="Get it from Microsoft" width="200"/>](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge)
 
 You can also get a copy in the [GitHub releases section](https://github.com/charlesmilette/SearchWithMyBrowser/releases).
 
