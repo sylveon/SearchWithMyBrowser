@@ -1,4 +1,10 @@
-﻿# SearchWithMyBrowser
+# SearchWithMyBrowser
+
+This is unmaintained. Please consider [EdgeDeflector](https://github.com/da2x/EdgeDeflector) instead.
+
+Original README left below
+
+--------
 
 [![Windows Store shield](https://img.shields.io/github/release/sylveon/SearchWithMyBrowser.svg?label=windows%20store&colorB=ff69b4)](https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge) [![PayPal Donations shield](https://img.shields.io/badge/donations-paypal-blue.svg)](https://paypal.me/syIveon) [![Build status](https://img.shields.io/appveyor/ci/sylveon/SearchWithMyBrowser/master.svg)](https://ci.appveyor.com/project/sylveon/searchwithmybrowser)
 
